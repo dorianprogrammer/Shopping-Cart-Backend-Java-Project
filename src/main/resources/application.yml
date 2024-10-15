@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: dream-shops
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/dream_shops_db
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+
+##(create, update, create-drop, validate)
+    hibernate:
+      ddl-auto: update
+
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+
+
+
+
+api:
+  prefix: /api/v1
+server:
+  port: 9191
